@@ -67,16 +67,16 @@
                     "filename": "zoom.tar.xz",
                     "only-arches": ["x86_64"],
                     "url": "https://zoom.us/client/latest/zoom_x86_64.tar.xz",
-                    "sha256": "953c8b6c4ce0fd6586cab462dfad7b9e60507b1d7b3906322280094d61c705a0",
-                    "size": 64636668
+                    "sha256": "7f9c52752ba2b86e696da09821bb61b7fb5b4fc369b82005a581d7e2ba50dcc5",
+                    "size": 64623412
                 },
                 {
                     "type": "extra-data",
                     "filename": "zoom.tar.xz",
                     "only-arches": ["i386"],
                     "url": "https://zoom.us/client/latest/zoom_i686.tar.xz",
-                    "sha256": "25bb27c1e94cb537c79d42e7de70aa70fc7d5f05819eb3f4920e44f80989aafb",
-                    "size": 40543140
+                    "sha256": "a325257ea1211908001248ad349ba57b957cbad9e3cb2c097027b273ac4757a2",
+                    "size": 40537804
                 }
             ]
         }
