@@ -1,7 +1,7 @@
 {
     "app-id": "us.zoom.Zoom",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "1.6",
+    "runtime-version": "18.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "zoom",
     "separate-locales": false,
@@ -66,17 +66,17 @@
                     "type": "extra-data",
                     "filename": "zoom.tar.xz",
                     "only-arches": ["x86_64"],
-                    "url": "https://zoom.us/client/latest/zoom_x86_64.tar.xz",
-                    "sha256": "70b6f414ec6892a6862783c7aa439dcf40f95ef4b6c2548a8b70954c992efcca",
-		    "size": 65449916
+                    "url": "https://zoom.us/client/2.4.121350.0816/zoom_x86_64.tar.xz",
+                    "sha256": "d19017fe7daaba5a16c5f39a5ba6acd8bf0a5d7863aeb94859264258be129e76",
+		            "size": 65410788
                 },
                 {
                     "type": "extra-data",
                     "filename": "zoom.tar.xz",
                     "only-arches": ["i386"],
-                    "url": "https://zoom.us/client/latest/zoom_i686.tar.xz",
-                    "sha256": "b36b28988579d85e644238ce1333b0f15ae296187f0654aecc633461e0cfb366",
-		    "size": 41353736
+                    "url": "https://zoom.us/client/2.4.121350.0816/zoom_i686.tar.xz",
+                    "sha256": "8fcadae591a6a1ff8689e5adb108bac2d38bb5f9b921c73e86aed8c45795f2b1",
+		            "size": 41236928
                 }
             ]
         }

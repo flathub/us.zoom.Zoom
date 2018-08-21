@@ -16,6 +16,7 @@
       <li>Easy-to-use, buy and scale</li>
       <li>Most affordable, straightforward pricing</li>
     </ul>
+    <p>NOTE: This wrapper is not verified by, affiliated with, or supported by zoom.us.</p>
   </description>
   <screenshots>
     <screenshot>
@@ -23,6 +24,7 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release date="2018-08-19" version="2.4.121350.0816"/>
     <release date="2018-07-15" version="2.3.128305.0716"/>
     <release date="2018-07-01" version="2.2.128200.0702"/>
     <release date="2018-05-23" version="2.1.103753.0521"/>
