@@ -32,9 +32,7 @@
                     "dest-filename": "apply_extra",
                     "commands": [
                         "tar xf zoom.tar.xz",
-                        "rm -f zoom.tar.xz",
-                        "mkdir -p export/share/applications",
-                        "install -Dm644 zoom/Zoom.png export/share/icons/hicolor/96x96/apps/us.zoom.Zoom.png"
+                        "rm -f zoom.tar.xz"
                     ]
                 },
                 {
