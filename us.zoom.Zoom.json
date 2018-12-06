@@ -22,6 +22,7 @@
                 "install -Dm644 us.zoom.Zoom.desktop /app/share/applications/us.zoom.Zoom.desktop",
                 "install -Dm644 us.zoom.Zoom.appdata.xml /app/share/appdata/us.zoom.Zoom.appdata.xml",
                 "install -Dm644 us.zoom.Zoom.64.png /app/share/icons/hicolor/64x64/apps/us.zoom.Zoom.png",
+                "install -Dm644 us.zoom.Zoom.96.png /app/share/icons/hicolor/96x96/apps/us.zoom.Zoom.png",
                 "install -Dm644 us.zoom.Zoom.128.png /app/share/icons/hicolor/128x128/apps/us.zoom.Zoom.png",
                 "install -Dm644 us.zoom.Zoom.256.png /app/share/icons/hicolor/256x256/apps/us.zoom.Zoom.png",
                 "install -Dm755 zoom.sh /app/bin/zoom"
@@ -32,9 +33,7 @@
                     "dest-filename": "apply_extra",
                     "commands": [
                         "tar xf zoom.tar.xz",
-                        "rm -f zoom.tar.xz",
-                        "mkdir -p export/share/applications",
-                        "install -Dm644 zoom/Zoom.png export/share/icons/hicolor/96x96/apps/us.zoom.Zoom.png"
+                        "rm -f zoom.tar.xz"
                     ]
                 },
                 {
@@ -54,6 +53,10 @@
                     "type": "file",
                     "path": "us.zoom.Zoom.64.png"
                 },
+				{
+                    "type": "file",
+                    "path": "us.zoom.Zoom.96.png"
+                },
                 {
                     "type": "file",
                     "path": "us.zoom.Zoom.128.png"
@@ -66,17 +69,17 @@
                     "type": "extra-data",
                     "filename": "zoom.tar.xz",
                     "only-arches": ["x86_64"],
-                    "url": "https://zoom.us/client/2.4.129780.0915/zoom_x86_64.tar.xz",
-                    "sha256": "e8344ea83439b34ead81d00a1c79197883ef38af5072f6d4e55924563d098068",
-                    "size": 65495744
+                    "url": "https://zoom.us/client/2.6.146750.1204/zoom_x86_64.tar.xz",
+                    "sha256": "2f6b881b4112afa231165059e35d87191f99300316cb827272d670ff5ea097a1",
+                    "size": 65750216
                 },
                 {
                     "type": "extra-data",
                     "filename": "zoom.tar.xz",
                     "only-arches": ["i386"],
-                    "url": "https://zoom.us/client/2.4.129780.0915/zoom_x86_64.tar.xz",
-                    "sha256": "e8344ea83439b34ead81d00a1c79197883ef38af5072f6d4e55924563d098068",
-                    "size": 65495744
+                    "url": "https://zoom.us/client/2.6.146750.1204/zoom_i686.tar.xz",
+                    "sha256": "a093b29c52eaa96c0add663ed46f66f1451cce9278fbd3f33b0a1247bf728901",
+                    "size": 41345952
                 }
             ]
         }
