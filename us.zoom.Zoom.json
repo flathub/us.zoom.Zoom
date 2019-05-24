@@ -6,7 +6,8 @@
     "command": "zoom",
     "separate-locales": false,
     "finish-args": [
-        "--share=ipc", "--socket=x11",
+        "--share=ipc",
+        "--socket=x11",
         "--socket=pulseaudio",
         "--share=network",
         "--device=all",
@@ -69,17 +70,17 @@
                     "type": "extra-data",
                     "filename": "zoom.tar.xz",
                     "only-arches": ["x86_64"],
-                    "url": "https://zoom.us/client/2.8.183302.0415/zoom_x86_64.tar.xz",
-                    "sha256": "5df085e47c9b67a1c24b20112d343afa22c537726cec5abdac09784782c14e1d",
-                    "size": 66325584
+                    "url": "https://zoom.us/client/2.8.222599.0519/zoom_x86_64.tar.xz",
+                    "sha256": "f27497b004a511c56cee5c26d0e376684b0896687c35d602f9acdf407ec7b92e",
+                    "size": 66282448
                 },
                 {
                     "type": "extra-data",
                     "filename": "zoom.tar.xz",
                     "only-arches": ["i386"],
-                    "url": "https://zoom.us/client/2.8.183302.0415/zoom_i686.tar.xz",
-                    "sha256": "e98ffc8d54d13b678cffcaed946aec5ee9d4bfdc2146cc8843e25a7d1f758a29",
-                    "size": 42291084
+                    "url": "https://zoom.us/client/2.8.222599.0519/zoom_i686.tar.xz",
+                    "sha256": "07144f037c0a68e200c532ce311872530168cfacef84a4da24b1793988f17bd9",
+                    "size": 42340900
                 }
             ]
         }
