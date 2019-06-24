@@ -40,7 +40,7 @@
                 {
                     "type": "script",
                     "dest-filename": "zoom.sh",
-                    "commands": ["exec /app/extra/zoom/ZoomLauncher \"$@\""]
+                    "commands": ["exec env TMPDIR=$XDG_CACHE_HOME /app/extra/zoom/ZoomLauncher \"$@\""]
                 },
                 {
                     "type": "file",
@@ -70,17 +70,17 @@
                     "type": "extra-data",
                     "filename": "zoom.tar.xz",
                     "only-arches": ["x86_64"],
-                    "url": "https://zoom.us/client/2.8.222599.0519/zoom_x86_64.tar.xz",
-                    "sha256": "f27497b004a511c56cee5c26d0e376684b0896687c35d602f9acdf407ec7b92e",
-                    "size": 66282448
+                    "url": "https://zoom.us/client/2.8.252201.0616/zoom_x86_64.tar.xz",
+                    "sha256": "c68cd090fff531f3ff30d8aa647dc95f2b5c2e0eb9a4a3cd5f4cf97d8de5f7f0",
+                    "size": 66291536
                 },
                 {
                     "type": "extra-data",
                     "filename": "zoom.tar.xz",
                     "only-arches": ["i386"],
-                    "url": "https://zoom.us/client/2.8.222599.0519/zoom_i686.tar.xz",
-                    "sha256": "07144f037c0a68e200c532ce311872530168cfacef84a4da24b1793988f17bd9",
-                    "size": 42340900
+                    "url": "https://zoom.us/client/2.8.252201.0616/zoom_i686.tar.xz",
+                    "sha256": "671e494636793fb0926d14edddb9df0ee5e3e36ce615a5ef794c7b1a949f5ea1",
+                    "size": 42362796
                 }
             ]
         }
