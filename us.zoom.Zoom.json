@@ -28,7 +28,7 @@
                 "install -Dm644 us.zoom.Zoom.256.png /app/share/icons/hicolor/256x256/apps/us.zoom.Zoom.png",
                 "install -Dm755 zoom.sh /app/bin/zoom"
             ],
-            "sources" : [
+            "sources": [
                 {
                     "type": "script",
                     "dest-filename": "apply_extra",
@@ -40,7 +40,9 @@
                 {
                     "type": "script",
                     "dest-filename": "zoom.sh",
-                    "commands": ["exec env TMPDIR=$XDG_CACHE_HOME /app/extra/zoom/ZoomLauncher \"$@\""]
+                    "commands": [
+                        "exec env TMPDIR=$XDG_CACHE_HOME /app/extra/zoom/ZoomLauncher \"$@\""
+                    ]
                 },
                 {
                     "type": "file",
@@ -69,16 +71,20 @@
                 {
                     "type": "extra-data",
                     "filename": "zoom.tar.xz",
-                    "only-arches": ["x86_64"],
-                    "url": "https://zoom.us/client/2.8.264592.0714/zoom_x86_64.tar.xz",
+                    "only-arches": [
+                        "x86_64"
+                    ],
+                    "url": "https://d11yldzmag5yn.cloudfront.net/prod/2.8.264592.0714/zoom_x86_64.tar.xz",
                     "sha256": "7c3701bb0476db215e976d93c05c85bb9353ac07ead17df6414453aebcd7b959",
                     "size": 66361592
                 },
                 {
                     "type": "extra-data",
                     "filename": "zoom.tar.xz",
-                    "only-arches": ["i386"],
-                    "url": "https://zoom.us/client/2.8.264592.0714/zoom_i686.tar.xz",
+                    "only-arches": [
+                        "i386"
+                    ],
+                    "url": "https://d11yldzmag5yn.cloudfront.net/prod/2.8.264592.0714/zoom_i686.tar.xz",
                     "sha256": "8e926c70837aa05c51dd6f73f224c2f3c29e9511f43398fb20b85bf5fbac08f0",
                     "size": 42433520
                 }
