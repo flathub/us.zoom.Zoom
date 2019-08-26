@@ -76,7 +76,12 @@
                     ],
                     "url": "https://d11yldzmag5yn.cloudfront.net/prod/2.8.264592.0714/zoom_x86_64.tar.xz",
                     "sha256": "7c3701bb0476db215e976d93c05c85bb9353ac07ead17df6414453aebcd7b959",
-                    "size": 66361592
+                    "size": 66361592,
+                    "x-checker-data": {
+                        "type": "rotating-url",
+                        "url": "https://zoom.us/client/latest/zoom_x86_64.tar.xz",
+                        "pattern": "https://.*/prod/([^/]+)/zoom_x86_64.tar.xz"
+                    }
                 },
                 {
                     "type": "extra-data",
@@ -86,7 +91,12 @@
                     ],
                     "url": "https://d11yldzmag5yn.cloudfront.net/prod/2.8.264592.0714/zoom_i686.tar.xz",
                     "sha256": "8e926c70837aa05c51dd6f73f224c2f3c29e9511f43398fb20b85bf5fbac08f0",
-                    "size": 42433520
+                    "size": 42433520,
+                    "x-checker-data": {
+                        "type": "rotating-url",
+                        "url": "https://zoom.us/client/latest/zoom_i686.tar.xz",
+                        "pattern": "https://.*/prod/([^/]+)/zoom_i686.tar.xz"
+                    }
                 }
             ]
         }
