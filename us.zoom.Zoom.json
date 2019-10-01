@@ -74,9 +74,9 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://d11yldzmag5yn.cloudfront.net/prod/3.0.291715.0908/zoom_x86_64.tar.xz",
-                    "sha256": "4e3435355e0d6c296afb9c3126dfb1a7fdf8363432c2e62cebcba00b1c674eb8",
-                    "size": 70487660,
+                    "url": "https://d11yldzmag5yn.cloudfront.net/prod/3.0.301026.0930/zoom_x86_64.tar.xz",
+                    "sha256": "593594dfd892d1b3c93727dc504c280b2b957942d7b473cd5f910b5fc8386c78",
+                    "size": 70625640,
                     "x-checker-data": {
                         "type": "rotating-url",
                         "url": "https://zoom.us/client/latest/zoom_x86_64.tar.xz",
@@ -89,9 +89,9 @@
                     "only-arches": [
                         "i386"
                     ],
-                    "url": "https://d11yldzmag5yn.cloudfront.net/prod/3.0.291715.0908/zoom_i686.tar.xz",
-                    "sha256": "efb539c27d85f0b748149f6472e9deb4724a27c95998cc3b4bfe9ffdda7d2b88",
-                    "size": 45645060,
+                    "url": "https://d11yldzmag5yn.cloudfront.net/prod/3.0.301026.0930/zoom_i686.tar.xz",
+                    "sha256": "65b6233327678acc45cea7461783c7c26543bcd880d12a31e574c5bd46c90084",
+                    "size": 45876372,
                     "x-checker-data": {
                         "type": "rotating-url",
                         "url": "https://zoom.us/client/latest/zoom_i686.tar.xz",
