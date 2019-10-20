@@ -14,7 +14,6 @@
         "--filesystem=home"
     ],
     "modules": [
-        "shared-modules/udev/udev-175.json",
         {
             "name": "zoom",
             "buildsystem": "simple",
