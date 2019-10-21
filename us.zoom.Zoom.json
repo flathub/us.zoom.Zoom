@@ -14,7 +14,6 @@
         "--filesystem=home"
     ],
     "modules": [
-        "shared-modules/udev/udev-175.json",
         {
             "name": "zoom",
             "buildsystem": "simple",
@@ -81,21 +80,6 @@
                         "type": "rotating-url",
                         "url": "https://zoom.us/client/latest/zoom_x86_64.tar.xz",
                         "pattern": "https://.*/prod/([^/]+)/zoom_x86_64.tar.xz"
-                    }
-                },
-                {
-                    "type": "extra-data",
-                    "filename": "zoom.tar.xz",
-                    "only-arches": [
-                        "i386"
-                    ],
-                    "url": "https://d11yldzmag5yn.cloudfront.net/prod/3.0.306796.1020/zoom_i686.tar.xz",
-                    "sha256": "5edb5280416158205685495a13d1dc9571a4b749b9cec5067c3eb01f3cc229d3",
-                    "size": 45886036,
-                    "x-checker-data": {
-                        "type": "rotating-url",
-                        "url": "https://zoom.us/client/latest/zoom_i686.tar.xz",
-                        "pattern": "https://.*/prod/([^/]+)/zoom_i686.tar.xz"
                     }
                 }
             ]
