@@ -7,3 +7,6 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - uses: flathub/actions/external-data-checker@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
