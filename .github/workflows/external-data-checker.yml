@@ -1,0 +1,9 @@
+name: 'Check if external data changed'
+on: ['deployment']
+
+jobs:
+  external-data-checker:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: flathub/actions/external-data-checker@master
