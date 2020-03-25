@@ -73,7 +73,7 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://d11yldzmag5yn.cloudfront.net/prod/3.5.372466.0322/zoom_x86_64.tar.xz",
+                    "url": "https://d11yldzmag5yn.cloudfront.net/prod/3.5.372466.0322/zoom_x86_64.tar.xz?_x_zm_rtaid=u3LhFTFQTBOL-a8TIDHhiA.1585141795472.5763f483b6948040d984727a2bddb30b&_x_zm_rhtaid=991",
                     "sha256": "202f37d27e31be10c1793325587dd53e8bc3521ca175fc8ed09dffd96b2e4e79",
                     "size": 72594544,
                     "x-checker-data": {
