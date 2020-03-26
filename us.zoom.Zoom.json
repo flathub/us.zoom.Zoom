@@ -73,7 +73,7 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://d11yldzmag5yn.cloudfront.net/prod/3.5.374815.0324/zoom_x86_64.tar.xz?_x_zm_rtaid=2TYzzwNYQum_uuJQYuURSw.1585199356496.802c0b7c42ce142b86720c8e2068b8ac&_x_zm_rhtaid=59",
+                    "url": "https://d11yldzmag5yn.cloudfront.net/prod/3.5.374815.0324/zoom_x86_64.tar.xz?_x_zm_rtaid=-neu3vbTSxS_mVxAs57rMQ.1585248783445.bc96bc8edc4111a4c0f2c1a3197e907b&_x_zm_rhtaid=154",
                     "sha256": "257ed8fcbdf7cf11e2d3a390f04ef991d92cb4d8babc86d71ae24ac92500d9de",
                     "size": 72609300,
                     "x-checker-data": {
