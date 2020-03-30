@@ -12,7 +12,10 @@
         "--share=network",
         "--device=all",
         "--env=QT_QPA_PLATFORM=",
-        "--own-name=org.kde.*"
+        "--own-name=org.kde.*",
+        "--filesystem=xdg-documents",
+        "--filesystem=xdg-videos",
+        "--persist=.zoom"
     ],
     "modules": [
         {
