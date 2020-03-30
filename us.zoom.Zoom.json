@@ -26,7 +26,8 @@
                 "install -Dm644 us.zoom.Zoom.96.png /app/share/icons/hicolor/96x96/apps/us.zoom.Zoom.png",
                 "install -Dm644 us.zoom.Zoom.128.png /app/share/icons/hicolor/128x128/apps/us.zoom.Zoom.png",
                 "install -Dm644 us.zoom.Zoom.256.png /app/share/icons/hicolor/256x256/apps/us.zoom.Zoom.png",
-                "install -Dm755 zoom.sh /app/bin/zoom"
+                "install -Dm755 zoom.sh /app/bin/zoom",
+                "install -Dm644 zoomus.conf /app/etc/zoomus.conf"
             ],
             "sources": [
                 {
@@ -41,6 +42,8 @@
                     "type": "script",
                     "dest-filename": "zoom.sh",
                     "commands": [
+                        "mkdir -p $XDG_CONFIG_HOME",
+                        "test -e $XDG_CONFIG_HOME/zoomus.conf || cp /app/etc/zoomus.conf $XDG_CONFIG_HOME/zoomus.conf",
                         "exec env TMPDIR=$XDG_CACHE_HOME /app/extra/zoom/ZoomLauncher \"$@\""
                     ]
                 },
@@ -67,6 +70,10 @@
                 {
                     "type": "file",
                     "path": "us.zoom.Zoom.256.png"
+                },
+                {
+                    "type": "file",
+                    "path": "zoomus.conf"
                 },
                 {
                     "type": "extra-data",
