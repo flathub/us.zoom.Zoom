@@ -11,6 +11,7 @@
         "--socket=pulseaudio",
         "--share=network",
         "--device=all",
+        "--env=QT_QPA_PLATFORM=",
         "--filesystem=home"
     ],
     "modules": [
