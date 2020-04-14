@@ -11,7 +11,10 @@
         "--socket=pulseaudio",
         "--share=network",
         "--device=all",
-        "--filesystem=home"
+        "--filesystem=home:ro",
+        "--filesystem=xdg-download",
+        "--filesystem=xdg-config/zoomus.conf:create",
+        "--filesystem=~/.zoom:create"
     ],
     "modules": [
         {
