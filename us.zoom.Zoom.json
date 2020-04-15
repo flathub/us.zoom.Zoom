@@ -12,6 +12,7 @@
         "--share=network",
         "--device=all",
         "--filesystem=home",
+        "--env=QT_QPA_PLATFORM=",
         "--own-name=org.kde.*"
     ],
     "modules": [
