@@ -11,8 +11,9 @@
         "--socket=pulseaudio",
         "--share=network",
         "--device=all",
+        "--filesystem=home",
         "--env=QT_QPA_PLATFORM=",
-        "--filesystem=home"
+        "--own-name=org.kde.*"
     ],
     "modules": [
         {
