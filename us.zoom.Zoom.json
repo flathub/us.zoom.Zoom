@@ -75,9 +75,9 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://d11yldzmag5yn.cloudfront.net/prod/3.5.385850.0413/zoom_x86_64.tar.xz",
-                    "sha256": "dcb6596c9e3db09bd412787c50c46c083060fb3a2a3808e6ed7676e5e7eb3311",
-                    "size": 72960852,
+                    "url": "https://d11yldzmag5yn.cloudfront.net/prod/3.5.392530.0421/zoom_x86_64.tar.xz",
+                    "sha256": "d659f0a73719d1c6a19f7b39e43399150d9af0dc88c8a8d4d8e88bcbb9cc772c",
+                    "size": 72984788,
                     "x-checker-data": {
                         "type": "rotating-url",
                         "url": "https://zoom.us/client/latest/zoom_x86_64.tar.xz",
