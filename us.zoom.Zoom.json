@@ -13,7 +13,8 @@
         "--device=all",
         "--filesystem=home",
         "--env=QT_QPA_PLATFORM=",
-        "--own-name=org.kde.*"
+        "--own-name=org.kde.*",
+        "--talk-name=org.freedesktop.ScreenSaver"
     ],
     "modules": [
         {
