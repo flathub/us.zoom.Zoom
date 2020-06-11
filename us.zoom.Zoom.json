@@ -11,10 +11,17 @@
         "--socket=pulseaudio",
         "--share=network",
         "--device=all",
-        "--filesystem=home",
+        "--own-name=org.kde.*",
+        "--filesystem=xdg-documents",
+        "--filesystem=xdg-videos",
+        "--persist=.zoom",
         "--env=QT_QPA_PLATFORM=",
         "--own-name=org.kde.*",
-        "--talk-name=org.freedesktop.ScreenSaver"
+        "--talk-name=org.freedesktop.PowerManagement.Inhibit",
+        "--talk-name=org.freedesktop.ScreenSaver",
+        "--talk-name=org.gnome.SessionManager",
+        "--talk-name=org.gnome.Shell",
+        "--talk-name=org.gnome.Shell.Screenshot"
     ],
     "modules": [
         {
@@ -43,6 +50,8 @@
                     "type": "script",
                     "dest-filename": "zoom.sh",
                     "commands": [
+                        "mkdir -p $XDG_CONFIG_HOME",
+                        "test -e $XDG_CONFIG_HOME/zoomus.conf || cp /app/etc/zoomus.conf $XDG_CONFIG_HOME/zoomus.conf && sed -i 's/enableWaylandShare=false/enableWaylandShare=true/",
                         "exec env TMPDIR=$XDG_CACHE_HOME /app/extra/zoom/ZoomLauncher \"$@\""
                     ]
                 },
@@ -69,6 +78,10 @@
                 {
                     "type": "file",
                     "path": "us.zoom.Zoom.256.png"
+                },
+                {
+                    "type": "file",
+                    "path": "zoomus.conf"
                 },
                 {
                     "type": "extra-data",
