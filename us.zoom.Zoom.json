@@ -11,7 +11,6 @@
         "--socket=pulseaudio",
         "--share=network",
         "--device=all",
-        "--own-name=org.kde.*",
         "--filesystem=xdg-documents",
         "--filesystem=xdg-videos",
         "--persist=.zoom",
