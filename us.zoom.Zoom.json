@@ -50,7 +50,7 @@
                     "dest-filename": "zoom.sh",
                     "commands": [
                         "mkdir -p $XDG_CONFIG_HOME",
-                        "test -e $XDG_CONFIG_HOME/zoomus.conf || cp /app/etc/zoomus.conf $XDG_CONFIG_HOME/zoomus.conf && sed -i 's/enableWaylandShare=false/enableWaylandShare=true/",
+                        "test -e $XDG_CONFIG_HOME/zoomus.conf || cp /app/etc/zoomus.conf $XDG_CONFIG_HOME/zoomus.conf && sed -i 's/enableWaylandShare=false/enableWaylandShare=true/'",
                         "exec env TMPDIR=$XDG_CACHE_HOME /app/extra/zoom/ZoomLauncher \"$@\""
                     ]
                 },
