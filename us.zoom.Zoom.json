@@ -11,10 +11,11 @@
         "--socket=pulseaudio",
         "--share=network",
         "--device=all",
-        "--filesystem=home",
+        "--filesystem=xdg-documents/Zoom:create",
         "--env=QT_QPA_PLATFORM=",
         "--own-name=org.kde.*",
-        "--talk-name=org.freedesktop.ScreenSaver"
+        "--talk-name=org.freedesktop.ScreenSaver",
+        "--persist=.zoom"
     ],
     "modules": [
         {
