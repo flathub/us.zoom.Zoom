@@ -16,6 +16,7 @@
         "--own-name=org.kde.*",
         "--talk-name=org.freedesktop.ScreenSaver",
         "--persist=.zoom"
+        "--persist=.config"
     ],
     "modules": [
         {
@@ -44,7 +45,6 @@
                     "type": "script",
                     "dest-filename": "zoom.sh",
                     "commands": [
-                        "ln -Ts $XDG_CONFIG_HOME ~/.config",
                         "exec env TMPDIR=$XDG_CACHE_HOME /app/extra/zoom/ZoomLauncher \"$@\""
                     ]
                 },
