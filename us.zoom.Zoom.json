@@ -15,7 +15,8 @@
         "--env=QT_QPA_PLATFORM=",
         "--own-name=org.kde.*",
         "--talk-name=org.freedesktop.ScreenSaver",
-        "--persist=.zoom"
+        "--persist=.zoom",
+        "--persist=.config"
     ],
     "modules": [
         {
