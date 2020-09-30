@@ -1,7 +1,7 @@
 {
     "app-id": "us.zoom.Zoom",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "19.08",
+    "runtime-version": "20.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "zoom",
     "separate-locales": false,
@@ -11,12 +11,14 @@
         "--socket=pulseaudio",
         "--share=network",
         "--device=all",
-        "--filesystem=xdg-documents/Zoom:create",
+        "--filesystem=~/Documents/Zoom:create",
+        "--filesystem=~/.zoom:create",
         "--env=QT_QPA_PLATFORM=",
         "--own-name=org.kde.*",
-        "--talk-name=org.freedesktop.ScreenSaver",
-        "--persist=.zoom",
-        "--persist=.config"
+        "--talk-name=org.gnome.Shell",
+        "--persist=.config",
+        "--persist=.cache",
+        "--env=XDG_CURRENT_DESKTOP=GNOME"
     ],
     "modules": [
         {
@@ -42,11 +44,8 @@
                     ]
                 },
                 {
-                    "type": "script",
-                    "dest-filename": "zoom.sh",
-                    "commands": [
-                        "exec env TMPDIR=$XDG_CACHE_HOME /app/extra/zoom/ZoomLauncher \"$@\""
-                    ]
+                    "type": "file",
+                    "path": "zoom.sh"
                 },
                 {
                     "type": "file",
