@@ -45,6 +45,7 @@
                     "type": "script",
                     "dest-filename": "zoom.sh",
                     "commands": [
+                        "sed -i 's/enableWaylandShare\=false/enableWaylandShare\=true/' ~/.var/app/us.zoom.Zoom/config/zoomus.conf",
                         "exec env TMPDIR=$XDG_CACHE_HOME /app/extra/zoom/ZoomLauncher \"$@\""
                     ]
                 },
@@ -91,3 +92,4 @@
         }
     ]
 }
+
