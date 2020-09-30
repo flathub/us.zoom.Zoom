@@ -45,6 +45,7 @@
                     "type": "script",
                     "dest-filename": "zoom.sh",
                     "commands": [
+                        "ln -s ~/.var/app/us.zoom.Zoom/config/zoomus.conf ~/.var/app/us.zoom.Zoom/.config",
                         "exec env TMPDIR=$XDG_CACHE_HOME /app/extra/zoom/ZoomLauncher \"$@\""
                     ]
                 },
