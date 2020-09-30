@@ -11,10 +11,18 @@
         "--socket=pulseaudio",
         "--share=network",
         "--device=all",
-        "--filesystem=home"
+        "--filesystem=xdg-documents/Zoom:create",
+        "--env=QT_QPA_PLATFORM=",
+        "--own-name=org.kde.*",
+        "--talk-name=org.freedesktop.PowerManagement.Inhibit",
+        "--talk-name=org.freedesktop.ScreenSaver",
+        "--talk-name=org.gnome.SessionManager",
+        "--talk-name=org.gnome.Shell",
+        "--talk-name=org.gnome.Shell.Screenshot",
+        "--persist=.zoom",
+        "--persist=.config"
     ],
     "modules": [
-        "shared-modules/udev/udev-175.json",
         {
             "name": "zoom",
             "buildsystem": "simple",
@@ -33,7 +41,7 @@
                     "type": "script",
                     "dest-filename": "apply_extra",
                     "commands": [
-                        "tar xf zoom.tar.xz",
+                        "tar xf zoom.tar.xz --no-same-owner",
                         "rm -f zoom.tar.xz"
                     ]
                 },
@@ -41,6 +49,7 @@
                     "type": "script",
                     "dest-filename": "zoom.sh",
                     "commands": [
+                        "sed -i 's/enableWaylandShare\=false/enableWaylandShare\=true/' ~/.var/app/us.zoom.Zoom/config/zoomus.conf",
                         "exec env TMPDIR=$XDG_CACHE_HOME /app/extra/zoom/ZoomLauncher \"$@\""
                     ]
                 },
@@ -74,31 +83,17 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://d11yldzmag5yn.cloudfront.net/prod/3.0.291715.0908/zoom_x86_64.tar.xz",
-                    "sha256": "4e3435355e0d6c296afb9c3126dfb1a7fdf8363432c2e62cebcba00b1c674eb8",
-                    "size": 70487660,
+                    "url": "https://d11yldzmag5yn.cloudfront.net/prod/5.3.469451.0927/zoom_x86_64.tar.xz",
+                    "sha256": "5b81857c8d0e8f62d8edd1688b06758f38da8d0bb076f0c294e696f645976961",
+                    "size": 40206068,
                     "x-checker-data": {
                         "type": "rotating-url",
                         "url": "https://zoom.us/client/latest/zoom_x86_64.tar.xz",
                         "pattern": "https://.*/prod/([^/]+)/zoom_x86_64.tar.xz"
-                    }
-                },
-                {
-                    "type": "extra-data",
-                    "filename": "zoom.tar.xz",
-                    "only-arches": [
-                        "i386"
-                    ],
-                    "url": "https://d11yldzmag5yn.cloudfront.net/prod/3.0.291715.0908/zoom_i686.tar.xz",
-                    "sha256": "efb539c27d85f0b748149f6472e9deb4724a27c95998cc3b4bfe9ffdda7d2b88",
-                    "size": 45645060,
-                    "x-checker-data": {
-                        "type": "rotating-url",
-                        "url": "https://zoom.us/client/latest/zoom_i686.tar.xz",
-                        "pattern": "https://.*/prod/([^/]+)/zoom_i686.tar.xz"
                     }
                 }
             ]
         }
     ]
 }
+

@@ -8,3 +8,4 @@ Type=Application
 StartupNotify=true
 Categories=GNOME;GTK;Network;InstantMessaging;
 MimeType=x-scheme-handler/zoommtg;
+StartupWMClass=zoom
