@@ -14,7 +14,11 @@
         "--filesystem=xdg-documents/Zoom:create",
         "--env=QT_QPA_PLATFORM=",
         "--own-name=org.kde.*",
+        "--talk-name=org.freedesktop.PowerManagement.Inhibit",
         "--talk-name=org.freedesktop.ScreenSaver",
+        "--talk-name=org.gnome.SessionManager",
+        "--talk-name=org.gnome.Shell",
+        "--talk-name=org.gnome.Shell.Screenshot",
         "--persist=.zoom",
         "--persist=.config"
     ],
@@ -46,6 +50,7 @@
                     "dest-filename": "zoom.sh",
                     "commands": [
                         "ln -s ~/.var/app/us.zoom.Zoom/config/zoomus.conf ~/.var/app/us.zoom.Zoom/.config",
+                        "sed -i 's/enableWaylandShare\=false/enableWaylandShare\=true/' ~/.var/app/us.zoom.Zoom/config/zoomus.conf",
                         "exec env TMPDIR=$XDG_CACHE_HOME /app/extra/zoom/ZoomLauncher \"$@\""
                     ]
                 },
@@ -92,3 +97,4 @@
         }
     ]
 }
+
