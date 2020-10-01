@@ -20,7 +20,8 @@
         "--talk-name=org.gnome.Shell",
         "--talk-name=org.gnome.Shell.Screenshot",
         "--persist=.zoom",
-        "--persist=.config"
+        "--persist=.config",
+        "--env=XDG_CURRENT_DESKTOP=GNOME"
     ],
     "modules": [
         {
