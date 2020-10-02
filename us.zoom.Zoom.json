@@ -11,7 +11,7 @@
         "--socket=pulseaudio",
         "--share=network",
         "--device=all",
-        "--filesystem=xdg-documents/Zoom:create",
+        "--filesystem=~/Documents/Zoom:create",
         "--filesystem=~/.zoom:create",
         "--env=QT_QPA_PLATFORM=",
         "--own-name=org.kde.*",
