@@ -12,6 +12,7 @@
         "--share=network",
         "--device=all",
         "--filesystem=xdg-documents/Zoom:create",
+        "--filesystem=~/.zoom",
         "--env=QT_QPA_PLATFORM=",
         "--own-name=org.kde.*",
         "--talk-name=org.freedesktop.PowerManagement.Inhibit",
@@ -19,7 +20,6 @@
         "--talk-name=org.gnome.SessionManager",
         "--talk-name=org.gnome.Shell",
         "--talk-name=org.gnome.Shell.Screenshot",
-        "--persist=.zoom",
         "--persist=.config",
         "--persist=.cache",
         "--env=XDG_CURRENT_DESKTOP=GNOME"
