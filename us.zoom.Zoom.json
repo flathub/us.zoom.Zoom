@@ -12,7 +12,7 @@
         "--share=network",
         "--device=all",
         "--filesystem=xdg-documents/Zoom:create",
-        "--filesystem=~/.zoom",
+        "--filesystem=~/.zoom:create",
         "--env=QT_QPA_PLATFORM=",
         "--own-name=org.kde.*",
         "--talk-name=org.freedesktop.PowerManagement.Inhibit",
