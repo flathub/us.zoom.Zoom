@@ -21,6 +21,7 @@
         "--talk-name=org.gnome.Shell.Screenshot",
         "--persist=.zoom",
         "--persist=.config",
+        "--persist=.cache",
         "--env=XDG_CURRENT_DESKTOP=GNOME"
     ],
     "modules": [
@@ -51,6 +52,7 @@
                     "dest-filename": "zoom.sh",
                     "commands": [
                         "ln -s ~/.var/app/us.zoom.Zoom/config/* ~/.var/app/us.zoom.Zoom/.config",
+                        "ln -s ~/.var/app/us.zoom.Zoom/cache/* ~/.var/app/us.zoom.Zoom/.cache",
                         "sed -i 's/enableWaylandShare\=false/enableWaylandShare\=true/' ~/.var/app/us.zoom.Zoom/config/zoomus.conf",
                         "exec env TMPDIR=$XDG_CACHE_HOME /app/extra/zoom/ZoomLauncher \"$@\""
                     ]
