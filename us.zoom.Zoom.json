@@ -17,9 +17,6 @@
         "--own-name=org.kde.*",
         "--talk-name=org.freedesktop.PowerManagement.Inhibit",
         "--talk-name=org.freedesktop.ScreenSaver",
-        "--talk-name=org.gnome.SessionManager",
-        "--talk-name=org.gnome.Shell",
-        "--talk-name=org.gnome.Shell.Screenshot",
         "--persist=.config",
         "--persist=.cache",
         "--env=XDG_CURRENT_DESKTOP=GNOME"
