@@ -12,9 +12,7 @@
         "--share=network",
         "--device=all",
         "--filesystem=~/Documents/Zoom:create",
-        /* `--persist=.zoom` breaks screen sharing in Wayland, so giving rw access to ~/.zoom is used instead. If you don't want to screen share in Wayland or you use Xorg, feel free to override by running `flatpak override --persist=.zoom --nofilesystem=~/.zoom us.zoom.Zoom`. */
         "--filesystem=~/.zoom:create",
-        /* */
         "--env=QT_QPA_PLATFORM=",
         "--own-name=org.kde.*",
         "--talk-name=org.gnome.Shell",
@@ -49,12 +47,9 @@
                     "type": "script",
                     "dest-filename": "zoom.sh",
                     "commands": [
-                        /* The commands below are required because Zoom hard codes ~/.config and ~/.cache instead of using XDG standards. Symlink errors are okay and won't harm. */
                         "ln -s ~/.var/app/us.zoom.Zoom/config/* ~/.var/app/us.zoom.Zoom/.config",
                         "ln -s ~/.var/app/us.zoom.Zoom/cache/* ~/.var/app/us.zoom.Zoom/.cache",
-                        /* The command is used to automatically set `enableWaylandShare` to `true` when Zoom starts. */
                         "sed -i 's/enableWaylandShare\=false/enableWaylandShare\=true/' ~/.var/app/us.zoom.Zoom/config/zoomus.conf",
-                        /* */
                         "exec env TMPDIR=$XDG_CACHE_HOME /app/extra/zoom/ZoomLauncher \"$@\""
                     ]
                 },
