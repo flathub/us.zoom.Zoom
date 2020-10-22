@@ -1,11 +1,13 @@
 [Desktop Entry]
 Name=Zoom
-Comment=Zoom Video Conferencing
+Comment=Zoom Video Conference
 GenericName=Zoom Client for Linux
 Exec=zoom %U
 Icon=us.zoom.Zoom
+Terminal=false
 Type=Application
 StartupNotify=true
-Categories=GNOME;GTK;Network;InstantMessaging;
-MimeType=x-scheme-handler/zoommtg;
-StartupWMClass=zoom
+Categories=Network;InstantMessaging;VideoConference;Telephony;
+MimeType=x-scheme-handler/zoommtg;x-scheme-handler/zoomus;x-scheme-handler/tel;x-scheme-handler/callto;x-scheme-handler/zoomphonecall;application/x-zoom
+X-KDE-Protocols=zoommtg;zoomus;tel;callto;zoomphonecall;
+StartupWMClass=Zoom
