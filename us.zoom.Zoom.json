@@ -16,7 +16,6 @@
         "--env=QT_QPA_PLATFORM=",
         "--own-name=org.kde.*",
         "--talk-name=org.gnome.Shell",
-        "--persist=.config",
         "--persist=.cache",
         "--env=XDG_CURRENT_DESKTOP=GNOME"
     ],
