@@ -1,16 +1,22 @@
-##!/usr/bin/env bash
+#!/usr/bin/env bash
 
-# Zoom hardcodes ~/.config instead of using XDG_CONFIG_HOME.
-ZOOMUS=$HOME/.var/app/us.zoom.Zoom/.config/zoomus.conf
+# Check if the current desktop is using Wayland
+if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
 
-# Check if ~/.var/app/us.zoom.Zoom/.config/zoomus.conf exists.
-if [[ -f "$ZOOMUS" ]]; then
-    :
-else
-    ln -s $HOME/.var/app/us.zoom.Zoom/config/ ~/.var/app/us.zoom.Zoom/.config
+	# Check if the line 'enableWaylandShare' is set to 'true' in $HOME/.var/app/us.zoom.Zoom/config/zoomus.conf
+	if ! grep -q enableWaylandShare=true "$HOME/.var/app/$FLATPAK_ID/config/zoomus.conf"; then
+
+		# Replace enableWaylandShare=false to enableWaylandShare=true
+		sed -i 's/enableWaylandShare\=false/enableWaylandShare\=true/' ~/.var/app/$FLATPAK_ID/config/zoomus.conf
+
+		# Recheck if the line 'enableWaylandShare' is set to true in $HOME/.var/app/us.zoom.Zoom/config/zoomus.conf
+		if ! grep -q enableWaylandShare=true "$HOME/.var/app/$FLATPAK_ID/config/zoomus.conf"; then
+
+			# If not, create a GTK dialog that says the string inside '--text'
+        	       	zenity --error --text="Wayland screen sharing is not yet enabled. Please restart Zoom for it to automatically enable, or manually change the value of \"enableWaylandShare\" to \"true\" in \"$HOME/.var/app/$FLATPAK_ID/config/zoomus.conf\"."
+
+		fi
+       	fi
 fi
-
-# Enable Wayland
-sed -i 's/enableWaylandShare\=false/enableWaylandShare\=true/' ~/.var/app/us.zoom.Zoom/config/zoomus.conf
 
 exec env TMPDIR=$XDG_CACHE_HOME /app/extra/zoom/ZoomLauncher "$@"
