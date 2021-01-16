@@ -78,7 +78,7 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://d11yldzmag5yn.cloudfront.net/prod/5.4.57862.0110/zoom_x86_64.tar.xz",
+                    "url": "https://cdn.zoom.us/prod/5.4.57862.0110/zoom_x86_64.tar.xz",
                     "sha256": "0fdb70aeef9635e7d7d113aa9f293d233939ef9db003234b12d2854995bf4444",
                     "size": 45850484,
                     "x-checker-data": {
