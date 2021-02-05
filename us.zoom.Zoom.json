@@ -10,16 +10,21 @@
     ],
     "finish-args": [
         "--share=ipc",
+        "--socket=wayland",
         "--socket=x11",
         "--socket=pulseaudio",
         "--share=network",
         "--device=all",
         "--filesystem=~/Documents/Zoom:create",
         "--filesystem=~/.zoom:create",
-        "--env=QT_QPA_PLATFORM=",
+        "--filesystem=/tmp/zoom:create",
         "--own-name=org.kde.*",
+        "--talk-name=org.freedesktop.ScreenSaver",
+        "--talk-name=org.freedesktop.PowerManagement.Inhibit",
+        "--talk-name=org.freedesktop.ScreenSaver",
+        "--talk-name=org.gnome.SessionManager",
         "--talk-name=org.gnome.Shell",
-        "--talk-name=org.freedesktop.ScreenSaver"
+        "--talk-name=org.gnome.Shell.Screenshot"
     ],
     "modules": [
         {
