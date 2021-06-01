@@ -18,7 +18,6 @@
         "--filesystem=~/Documents/Zoom:create",
         "--filesystem=~/.zoom:create",
         "--own-name=org.kde.*",
-        "--talk-name=org.freedesktop.ScreenSaver",
         "--talk-name=org.freedesktop.PowerManagement.Inhibit",
         "--talk-name=org.freedesktop.ScreenSaver",
         "--talk-name=org.gnome.SessionManager",
