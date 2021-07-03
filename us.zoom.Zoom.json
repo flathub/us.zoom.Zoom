@@ -1,8 +1,8 @@
 {
     "app-id": "us.zoom.Zoom",
-    "runtime": "org.freedesktop.Platform",
-    "runtime-version": "20.08",
-    "sdk": "org.freedesktop.Sdk",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.12",
+    "sdk": "org.kde.Sdk",
     "command": "zoom",
     "separate-locales": false,
     "tags": [
@@ -10,16 +10,19 @@
     ],
     "finish-args": [
         "--share=ipc",
+        "--socket=wayland",
         "--socket=x11",
         "--socket=pulseaudio",
         "--share=network",
         "--device=all",
         "--filesystem=~/Documents/Zoom:create",
         "--filesystem=~/.zoom:create",
-        "--env=QT_QPA_PLATFORM=",
         "--own-name=org.kde.*",
+        "--talk-name=org.freedesktop.PowerManagement.Inhibit",
+        "--talk-name=org.freedesktop.ScreenSaver",
+        "--talk-name=org.gnome.SessionManager",
         "--talk-name=org.gnome.Shell",
-        "--talk-name=org.freedesktop.ScreenSaver"
+        "--talk-name=org.gnome.Shell.Screenshot"
     ],
     "modules": [
         {
