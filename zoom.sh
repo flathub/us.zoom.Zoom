@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 CONF_FILE=$HOME/.zoom/config/zoomus.conf
-QPA=xcb
+
 # Check if the current desktop is using Wayland
 if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
 
@@ -13,7 +13,6 @@ if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
 
         # Recheck if the line 'enableWaylandShare' is set to true in $HOME/.var/app/us.zoom.Zoom/config/zoomus.conf
         if ! grep -q enableWaylandShare=true "$CONF_FILE"; then
-
             # If not, create a GTK dialog that says the string inside '--text'
             zenity --error --text="Wayland screen sharing is not yet enabled. Please restart Zoom for it to automatically enable, or manually change the value of \"enableWaylandShare\" to \"true\" in \"$CONF_FILE\"."
         fi
@@ -21,6 +20,10 @@ if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
 fi
 
 if [ -z "$DISPLAY" ] && [ -n "$WAYLAND_DISPLAY" ]; then
+    echo "Running in experimental Wayland mode (screensharing might not work)"
     QPA=wayland
+else
+    QPA=xcb
 fi
+
 exec env TMPDIR=$XDG_CACHE_HOME QT_QPA_PLATFORM=$QPA /app/extra/zoom/ZoomLauncher "$@"
