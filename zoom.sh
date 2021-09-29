@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
 CONF_FILE=$HOME/.zoom/config/zoomus.conf
-
+QPA=xcb
 # Check if the current desktop is using Wayland
 if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
-    QPA=wayland
 
     # Check if the line 'enableWaylandShare' is set to 'true' in $HOME/.var/app/us.zoom.Zoom/config/zoomus.conf
     if ! grep -q enableWaylandShare=true "$CONF_FILE"; then
@@ -19,8 +18,6 @@ if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
             zenity --error --text="Wayland screen sharing is not yet enabled. Please restart Zoom for it to automatically enable, or manually change the value of \"enableWaylandShare\" to \"true\" in \"$CONF_FILE\"."
         fi
     fi
-else 
-    QPA=xcb
 fi
 
 if [ -z "$DISPLAY" ] && [ -n "$WAYLAND_DISPLAY" ]; then
