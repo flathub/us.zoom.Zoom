@@ -23,4 +23,7 @@ else
     QPA=xcb
 fi
 
+if [ -z "$DISPLAY" ] && [ -n "$WAYLAND_DISPLAY" ]; then
+    QPA=wayland
+fi
 exec env TMPDIR=$XDG_CACHE_HOME QT_QPA_PLATFORM=$QPA /app/extra/zoom/ZoomLauncher "$@"
