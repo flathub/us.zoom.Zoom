@@ -24,6 +24,73 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="5.8.0.16" date="2021-09-23" type="stable">
+      <url type="details">https://support.zoom.us/hc/en-us/articles/4409282715917-Release-notes-for-September-23-2021#h_7a892023-ad83-41dc-89a1-245a6070f01b</url>
+      <description>
+<p>New and enhanced features</p>
+<ul>
+<li><p>General features</p>
+<ul>
+<li><em>Unique file names for local recordings</em> **
+**Each file created as part of a local recording will be given a unique file name. The type of file will start the name (video, audio), followed by a string of numbers. Users will also be provided suggestions on what to rename the files, if they choose to further customize the file names.</li>
+<li><em>Support for additional time zones*</em>*
+**Scheduling on the client now supports the GMT -7 Yukon, GMT +2 Chisinau, and GMT +5:30 Colombo time zones, which were already supported when scheduling in the web portal. Additionally, corrections have been made to Brazilian time zones, and Yerevan has been split into its own time zone.</li>
+
+</ul>
+</li>
+<li><p>Meeting/webinar features</p>
+<ul>
+<li><em>Stop incoming video</em> 
+Users in a meeting can easily disable all incoming video through in-meeting controls. This may be done to preserve bandwidth for shared content, or to avoid mental fatigue from viewing multiple, active video participants. The account owner and admins can enable this for use in meetings at the Account-, Group-, and User-level web settings.</li>
+<li><em>Poll access for alternative hosts</em> 
+If meeting hosts add alternative hosts to their meeting, they can allow alternative hosts to add or edit polls. The alternative host in the meeting will have the additional in-meeting options to add or edit a poll, which launches the web portal to make the changes.</li>
+<li><em>Aligned separate audio tracks for local recordings</em> 
+When recording separate audio tracks for a local recording, the audio tracks will be aligned, in that each track is in sync with each other and start at the same. Recording tracks will increase in size slightly, as extra padding will be added to each file to ensure tracks all begin at the same time.</li>
+<li><em>Updated recording privacy disclaimer</em> 
+The recording disclaimer has been updated to provide clearer information regarding how their data is being handled and who can access it.</li>
+
+</ul>
+</li>
+<li><p>Meeting features</p>
+<ul>
+<li><em>Security settings overview</em> **
+**The host and co-host in a meeting can quickly check what security features are currently in effect for the meeting they are hosting. This information is accessible through the in-meeting encryption shield, located in the top-left corner of the meeting.</li>
+<li><em>Participant attendance status</em> 
+If the host has the Google or Outlook calendar integration configured, Zoom will display a list of others invited to the meeting but not yet in attendance, allowing for quick checks if everyone is in attendance yet. Their invite response (Accepted, Declined, Maybe) is listed with their name and the host can easily invite them to the meeting from the participants panel. This feature can be enabled for use in meetings at the Account-, Group-, and User-level web settings, and will initially be available only for free users as part of a beta.</li>
+
+</ul>
+</li>
+<li><p>Chat features</p>
+<ul>
+<li><em>Additional customization for Personal Note</em> 
+The Personal Note can be configured to display for a specific period of time, as well as appearing above the text input box when someone is composing a message to you. For example, a user may say they are Out of office for the next few days, and that note will appear above the drafted message when someone is chatting directly with or mentioning them, warning them of the user’s current unavailability.</li>
+<li><em>Clearer notification when converting a group-chat into a channel</em> 
+When a multi-user chat is named, this converts the group chat into an official chat channel. The user changing the channel will be more informed of the effect of the change, and other users in the group will be notified of the changes as well, helping them locate the channel by its new name.</li>
+
+</ul>
+</li>
+<li><p>Zoom Phone features</p>
+<ul>
+<li><em>UI enhancement to phone number labels</em> 
+When searching for phone users using the dial pad or SMS search field, users can view the associated phone number labels by clicking or tapping the right arrow icon.</li>
+<li><em>Prompt for emergency address</em> 
+If the admin has enabled nomadic emergency services and personal locations; or allowed users to manage their emergency address, users will receive prompts to confirm or update their emergency addresses until they do so.</li>
+
+</ul>
+</li>
+
+</ul>
+<p>Resolved Issues</p>
+<ul>
+<li>Minor bug fixes</li>
+<li>Security enhancements</li>
+<li>Resolved an issue regarding slow connections after switching networks </li>
+<li>Resolved an issue for a subset of users regarding mute upon entry and recording disclaimer prompts </li>
+<li>Resolved an issue for a subset of users regarding duplicated virtual background images set by admins </li>
+
+</ul>
+      </description>
+    </release>
     <release version="5.7.31792.0820" date="2021-08-23"/>
     <release version="5.7.29123.0808" date="2021-08-09"/>
     <release version="5.7.28991.0726" date="2021-07-26"/>
