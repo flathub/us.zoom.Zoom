@@ -12,7 +12,6 @@
         "--share=ipc",
         "--socket=x11",
         "--socket=pulseaudio",
-        "--socket=session-bus",
         "--share=network",
         "--device=all",
         "--filesystem=xdg-run/pipewire-0",
