@@ -24,6 +24,7 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="5.8.3.145" date="2021-10-25"/>
     <release version="5.8.0.16" date="2021-09-23" type="stable">
       <url type="details">https://support.zoom.us/hc/en-us/articles/4409282715917-Release-notes-for-September-23-2021#h_7a892023-ad83-41dc-89a1-245a6070f01b</url>
       <description>
