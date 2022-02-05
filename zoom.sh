@@ -3,6 +3,8 @@
 # Check if the current desktop is using Wayland
 if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
 
+	# Workaround for Zoom screen sharing not working on non GNOME desktops
+	export XDG_CURRENT_DESKTOP=GNOME
 	# Check if the line 'enableWaylandShare' is set to 'true' in $HOME/.var/app/us.zoom.Zoom/config/zoomus.conf
 	if ! grep -q enableWaylandShare=true "$HOME/.var/app/$FLATPAK_ID/config/zoomus.conf"; then
 
