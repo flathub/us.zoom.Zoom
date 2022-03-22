@@ -1,24 +1,26 @@
 {
     "app-id": "us.zoom.Zoom",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "20.08",
+    "runtime-version": "21.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "zoom",
     "separate-locales": false,
+    "tags": [
+        "proprietary"
+    ],
     "finish-args": [
         "--share=ipc",
         "--socket=x11",
         "--socket=pulseaudio",
         "--share=network",
         "--device=all",
+        "--filesystem=xdg-run/pipewire-0",
         "--filesystem=~/Documents/Zoom:create",
         "--filesystem=~/.zoom:create",
         "--env=QT_QPA_PLATFORM=",
         "--own-name=org.kde.*",
         "--talk-name=org.gnome.Shell",
-        "--persist=.config",
-        "--persist=.cache",
-        "--env=XDG_CURRENT_DESKTOP=GNOME"
+        "--talk-name=org.freedesktop.ScreenSaver"
     ],
     "modules": [
         {
@@ -77,9 +79,9 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://d11yldzmag5yn.cloudfront.net/prod/5.3.469451.0927/zoom_x86_64.tar.xz",
-                    "sha256": "5b81857c8d0e8f62d8edd1688b06758f38da8d0bb076f0c294e696f645976961",
-                    "size": 40206068,
+                    "url": "https://cdn.zoom.us/prod/5.10.0.2450/zoom_x86_64.tar.xz",
+                    "sha256": "86cdb57baa6c9446877630a37e0e0d7ca0ae18b07e76968dbf91bb42bb032d85",
+                    "size": 128642016,
                     "x-checker-data": {
                         "type": "rotating-url",
                         "url": "https://zoom.us/client/latest/zoom_x86_64.tar.xz",

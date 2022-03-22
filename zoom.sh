@@ -1,22 +1,22 @@
 #!/usr/bin/env bash
 
-# Zoom hardcodes ~/.config instead of using XDG_CONFIG_HOME.
-ZOOMUS=$HOME/.var/app/us.zoom.Zoom/.config/zoomus.conf
+# Check if the current desktop is using Wayland
+if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
 
-# Check if ~/.var/app/us.zoom.Zoom/.config/zoomus.conf exists.
-if [[ -f "$ZOOMUS" ]]; then
-    :
-else
-    # If ~/.var/app/us.zoom.Zoom/.config/zoomus.conf doesn't exist, symlink ~/.var/app/us.zoom.Zoom/config/ to ~/.var/app/us.zoom.Zoom/.config.
-    ln -s $HOME/.var/app/us.zoom.Zoom/config/* ~/.var/app/us.zoom.Zoom/.config
-    # Check (again) if ~/.var/app/us.zoom.Zoom/.config/zoomus.conf exists.
-    if [[ -f "$ZOOMUS" ]]; then
-        # If it does, replace enableWaylandShare=false to enableWaylandShare=true in ~/.var/app/us.zoom.Zoom/config/zoomus.conf.
-    	sed -i 's/enableWaylandShare\=false/enableWaylandShare\=true/' ~/.var/app/us.zoom.Zoom/config/zoomus.conf
-    else
-        # If it doesn't, echo:
-    	echo "zoomus.conf does not exist yet. Please re-run Zoom for it to automatically enable Wayland."
-    fi
+	# Check if the line 'enableWaylandShare' is set to 'true' in $HOME/.var/app/us.zoom.Zoom/config/zoomus.conf
+	if ! grep -q enableWaylandShare=true "$HOME/.var/app/$FLATPAK_ID/config/zoomus.conf"; then
+
+		# Replace enableWaylandShare=false to enableWaylandShare=true
+		sed -i 's/enableWaylandShare\=false/enableWaylandShare\=true/' ~/.var/app/$FLATPAK_ID/config/zoomus.conf
+
+		# Recheck if the line 'enableWaylandShare' is set to true in $HOME/.var/app/us.zoom.Zoom/config/zoomus.conf
+		if ! grep -q enableWaylandShare=true "$HOME/.var/app/$FLATPAK_ID/config/zoomus.conf"; then
+
+			# If not, create a GTK dialog that says the string inside '--text'
+        	       	zenity --error --text="Wayland screen sharing is not yet enabled. Please restart Zoom for it to automatically enable, or manually change the value of \"enableWaylandShare\" to \"true\" in \"$HOME/.var/app/$FLATPAK_ID/config/zoomus.conf\"."
+
+		fi
+       	fi
 fi
 
 exec env TMPDIR=$XDG_CACHE_HOME /app/extra/zoom/ZoomLauncher "$@"
