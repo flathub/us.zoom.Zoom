@@ -19,4 +19,4 @@ if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
        	fi
 fi
 
-exec env TMPDIR=$XDG_CACHE_HOME /app/extra/zoom/ZoomLauncher --no-sandbox "$@"
+TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID" exec /app/extra/zoom/ZoomLauncher "$@"
