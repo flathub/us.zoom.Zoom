@@ -16,12 +16,10 @@
         "--socket=pulseaudio",
         "--share=network",
         "--device=all",
-        "--filesystem=xdg-run/pipewire-0",
         "--filesystem=~/Documents/Zoom:create",
         "--filesystem=~/.zoom:create",
         "--env=QT_QPA_PLATFORM=",
         "--own-name=org.kde.*",
-        "--talk-name=org.gnome.Shell",
         "--talk-name=org.freedesktop.ScreenSaver"
     ],
     "modules": [
