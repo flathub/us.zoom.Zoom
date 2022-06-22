@@ -16,12 +16,10 @@
         "--socket=pulseaudio",
         "--share=network",
         "--device=all",
-        "--filesystem=xdg-run/pipewire-0",
         "--filesystem=~/Documents/Zoom:create",
         "--filesystem=~/.zoom:create",
         "--env=QT_QPA_PLATFORM=",
         "--own-name=org.kde.*",
-        "--talk-name=org.gnome.Shell",
         "--talk-name=org.freedesktop.ScreenSaver"
     ],
     "modules": [
@@ -93,9 +91,9 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://cdn.zoom.us/prod/5.10.6.3192/zoom_x86_64.tar.xz",
-                    "sha256": "a4a936dfd2388a2eedd02762b0e03315f6dca953e4c2b5ba500bb41529395dd0",
-                    "size": 130094040,
+                    "url": "https://cdn.zoom.us/prod/5.11.0.3540/zoom_x86_64.tar.xz",
+                    "sha256": "b7b812f151ab303a2ca1cff581c29298fde36c1664855221e4f511ae228fe502",
+                    "size": 131577872,
                     "x-checker-data": {
                         "type": "rotating-url",
                         "url": "https://zoom.us/client/latest/zoom_x86_64.tar.xz",
