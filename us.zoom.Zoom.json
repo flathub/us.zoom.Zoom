@@ -1,10 +1,8 @@
 {
     "app-id": "us.zoom.Zoom",
-    "base": "org.electronjs.Electron2.BaseApp",
-    "base-version": "21.08",
-    "runtime": "org.freedesktop.Platform",
-    "runtime-version": "21.08",
-    "sdk": "org.freedesktop.Sdk",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.15",
+    "sdk": "org.kde.Sdk",
     "command": "zoom",
     "separate-locales": false,
     "tags": [
@@ -19,7 +17,6 @@
         "--device=all",
         "--filesystem=~/Documents/Zoom:create",
         "--filesystem=~/.zoom:create",
-        "--env=QT_QPA_PLATFORM=",
         "--own-name=org.kde.*",
         "--talk-name=org.freedesktop.ScreenSaver"
     ],
