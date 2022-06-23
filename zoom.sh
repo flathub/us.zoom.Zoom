@@ -26,4 +26,4 @@ else
     QPA=xcb
 fi
 
-exec env TMPDIR=$XDG_CACHE_HOME QT_QPA_PLATFORM=$QPA /app/extra/zoom/ZoomLauncher "$@"
+exec env TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID" TMPDIR=$XDG_CACHE_HOME QT_QPA_PLATFORM=$QPA /app/extra/zoom/ZoomLauncher "$@"
