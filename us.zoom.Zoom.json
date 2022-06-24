@@ -1,7 +1,9 @@
 {
     "app-id": "us.zoom.Zoom",
+    "base": "org.electronjs.Electron2.BaseApp",
+    "base-version": "21.08",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "20.08",
+    "runtime-version": "21.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "zoom",
     "separate-locales": false,
@@ -11,6 +13,7 @@
     "finish-args": [
         "--share=ipc",
         "--socket=x11",
+        "--socket=wayland",
         "--socket=pulseaudio",
         "--share=network",
         "--device=all",
@@ -18,7 +21,6 @@
         "--filesystem=~/.zoom:create",
         "--env=QT_QPA_PLATFORM=",
         "--own-name=org.kde.*",
-        "--talk-name=org.gnome.Shell",
         "--talk-name=org.freedesktop.ScreenSaver"
     ],
     "modules": [
@@ -33,7 +35,9 @@
                 "install -Dm644 us.zoom.Zoom.96.png /app/share/icons/hicolor/96x96/apps/us.zoom.Zoom.png",
                 "install -Dm644 us.zoom.Zoom.128.png /app/share/icons/hicolor/128x128/apps/us.zoom.Zoom.png",
                 "install -Dm644 us.zoom.Zoom.256.png /app/share/icons/hicolor/256x256/apps/us.zoom.Zoom.png",
-                "install -Dm755 zoom.sh /app/bin/zoom"
+                "install -Dm755 zoom.sh /app/bin/zoom",
+                "install -Dm755 zoom-wrapper.sh /app/bin/zoom-wrapper.sh",
+                "install -Dm644 zoom-ld.so.conf /app/etc/ld.so.conf"
             ],
             "sources": [
                 {
@@ -41,12 +45,22 @@
                     "dest-filename": "apply_extra",
                     "commands": [
                         "tar xf zoom.tar.xz --no-same-owner",
-                        "rm -f zoom.tar.xz"
+                        "rm -f zoom.tar.xz",
+                        "mv /app/extra/zoom/zoom /app/extra/zoom/zoom.real",
+                        "cp /app/bin/zoom-wrapper.sh /app/extra/zoom/zoom"
                     ]
                 },
                 {
                     "type": "file",
                     "path": "zoom.sh"
+                },
+                {
+                    "type": "file",
+                    "path": "zoom-wrapper.sh"
+                },
+                {
+                    "type": "file",
+                    "path": "zoom-ld.so.conf"
                 },
                 {
                     "type": "file",
@@ -78,9 +92,9 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://cdn.zoom.us/prod/5.7.28991.0726/zoom_x86_64.tar.xz",
-                    "sha256": "43b64de61b1016f736fb10d0c14c7b3327d7701151b485d4da0daa09e729a5b7",
-                    "size": 52594424,
+                    "url": "https://cdn.zoom.us/prod/5.11.0.3540/zoom_x86_64.tar.xz",
+                    "sha256": "b7b812f151ab303a2ca1cff581c29298fde36c1664855221e4f511ae228fe502",
+                    "size": 131577872,
                     "x-checker-data": {
                         "type": "rotating-url",
                         "url": "https://zoom.us/client/latest/zoom_x86_64.tar.xz",
