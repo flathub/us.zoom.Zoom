@@ -25,6 +25,38 @@
     ],
     "modules": [
         {
+            "name": "krb5",
+            "subdir": "src",
+            "config-opts": [
+                "--disable-static",
+                "--disable-rpath"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://kerberos.org/dist/krb5/1.20/krb5-1.20.1.tar.gz",
+                    "sha256": "704aed49b19eb5a7178b34b2873620ec299db08752d6a8574f95d41879ab8851",
+                    "size": 8661660,
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 13287,
+                        "stable-only": true,
+                        "url-template": "https://kerberos.org/dist/krb5/$major.$minor/krb5-$major.$minor.$patch.tar.gz"
+                    }
+                }
+            ],
+            "cleanup": [
+                "/sbin",
+                "/bin",
+                "/var",
+                "/include",
+                "/lib/pkgconfig",
+                "/share/et",
+                "/share/examples",
+                "/share/man"
+            ]
+        },
+        {
             "name": "zoom",
             "buildsystem": "simple",
             "build-commands": [
