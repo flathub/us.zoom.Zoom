@@ -1,7 +1,9 @@
 {
     "app-id": "us.zoom.Zoom",
+    "base": "org.electronjs.Electron2.BaseApp",
+    "base-version": "22.08",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "21.08",
+    "runtime-version": "22.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "zoom",
     "separate-locales": false,
@@ -11,18 +13,49 @@
     "finish-args": [
         "--share=ipc",
         "--socket=x11",
+        "--socket=wayland",
         "--socket=pulseaudio",
         "--share=network",
         "--device=all",
-        "--filesystem=xdg-run/pipewire-0",
         "--filesystem=~/Documents/Zoom:create",
         "--filesystem=~/.zoom:create",
         "--env=QT_QPA_PLATFORM=",
         "--own-name=org.kde.*",
-        "--talk-name=org.gnome.Shell",
         "--talk-name=org.freedesktop.ScreenSaver"
     ],
     "modules": [
+        {
+            "name": "krb5",
+            "subdir": "src",
+            "config-opts": [
+                "--disable-static",
+                "--disable-rpath"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://kerberos.org/dist/krb5/1.20/krb5-1.20.1.tar.gz",
+                    "sha256": "704aed49b19eb5a7178b34b2873620ec299db08752d6a8574f95d41879ab8851",
+                    "size": 8661660,
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 13287,
+                        "stable-only": true,
+                        "url-template": "https://kerberos.org/dist/krb5/$major.$minor/krb5-$major.$minor.$patch.tar.gz"
+                    }
+                }
+            ],
+            "cleanup": [
+                "/sbin",
+                "/bin",
+                "/var",
+                "/include",
+                "/lib/pkgconfig",
+                "/share/et",
+                "/share/examples",
+                "/share/man"
+            ]
+        },
         {
             "name": "zoom",
             "buildsystem": "simple",
@@ -34,7 +67,9 @@
                 "install -Dm644 us.zoom.Zoom.96.png /app/share/icons/hicolor/96x96/apps/us.zoom.Zoom.png",
                 "install -Dm644 us.zoom.Zoom.128.png /app/share/icons/hicolor/128x128/apps/us.zoom.Zoom.png",
                 "install -Dm644 us.zoom.Zoom.256.png /app/share/icons/hicolor/256x256/apps/us.zoom.Zoom.png",
-                "install -Dm755 zoom.sh /app/bin/zoom"
+                "install -Dm755 zoom.sh /app/bin/zoom",
+                "install -Dm755 zoom-wrapper.sh /app/bin/zoom-wrapper.sh",
+                "install -Dm644 zoom-ld.so.conf /app/etc/ld.so.conf"
             ],
             "sources": [
                 {
@@ -42,12 +77,22 @@
                     "dest-filename": "apply_extra",
                     "commands": [
                         "tar xf zoom.tar.xz --no-same-owner",
-                        "rm -f zoom.tar.xz"
+                        "rm -f zoom.tar.xz",
+                        "mv /app/extra/zoom/zoom /app/extra/zoom/zoom.real",
+                        "cp /app/bin/zoom-wrapper.sh /app/extra/zoom/zoom"
                     ]
                 },
                 {
                     "type": "file",
                     "path": "zoom.sh"
+                },
+                {
+                    "type": "file",
+                    "path": "zoom-wrapper.sh"
+                },
+                {
+                    "type": "file",
+                    "path": "zoom-ld.so.conf"
                 },
                 {
                     "type": "file",
@@ -79,9 +124,9 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://cdn.zoom.us/prod/5.10.4.2845/zoom_x86_64.tar.xz",
-                    "sha256": "1af06e98f2ff52cab9290047ab66f3d3f9cceb8e519d72d35e14a825d248b738",
-                    "size": 129882272,
+                    "url": "https://cdn.zoom.us/prod/5.13.10.1208/zoom_x86_64.tar.xz",
+                    "sha256": "bd6e92d78f88820da8ff65ef61600986923b6581c520a86975b06cb3de3be7ae",
+                    "size": 166970460,
                     "x-checker-data": {
                         "type": "rotating-url",
                         "url": "https://zoom.us/client/latest/zoom_x86_64.tar.xz",
