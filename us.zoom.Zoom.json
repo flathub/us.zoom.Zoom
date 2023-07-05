@@ -34,9 +34,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://kerberos.org/dist/krb5/1.20/krb5-1.20.1.tar.gz",
-                    "sha256": "704aed49b19eb5a7178b34b2873620ec299db08752d6a8574f95d41879ab8851",
-                    "size": 8661660,
+                    "url": "https://kerberos.org/dist/krb5/1.21/krb5-1.21.tar.gz",
+                    "sha256": "69f8aaff85484832df67a4bbacd99b9259bd95aab8c651fbbe65cdc9620ea93b",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 13287,
@@ -124,9 +123,9 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://cdn.zoom.us/prod/5.14.10.3738/zoom_x86_64.tar.xz",
-                    "sha256": "cc7c2bbec989aed2ad6de83880b04da255919086a93234f422db13996c56cfd5",
-                    "size": 168546944,
+                    "url": "https://cdn.zoom.us/prod/5.15.2.4260/zoom_x86_64.tar.xz",
+                    "sha256": "0494e07509aef1182447a314c8e8f7958dc3a7c8d50c320d6e4a2b7aee583318",
+                    "size": 177327616,
                     "x-checker-data": {
                         "type": "rotating-url",
                         "url": "https://zoom.us/client/latest/zoom_x86_64.tar.xz",
