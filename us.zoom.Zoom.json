@@ -41,7 +41,7 @@
                         "type": "anitya",
                         "project-id": 13287,
                         "stable-only": true,
-                        "url-template": "https://kerberos.org/dist/krb5/$major.$minor/krb5-$major.$minor.$patch.tar.gz"
+                        "url-template": "https://kerberos.org/dist/krb5/$major.$minor/krb5-$major.$minor.tar.gz"
                     }
                 }
             ],
