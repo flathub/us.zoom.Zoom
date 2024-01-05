@@ -37,10 +37,10 @@
                     "url": "https://kerberos.org/dist/krb5/1.21/krb5-1.21.tar.gz",
                     "sha256": "69f8aaff85484832df67a4bbacd99b9259bd95aab8c651fbbe65cdc9620ea93b",
                     "x-checker-data": {
-                        "type": "anitya",
-                        "project-id": 13287,
-                        "stable-only": true,
-                        "url-template": "https://kerberos.org/dist/krb5/$major.$minor/krb5-$major.$minor.tar.gz"
+                        "type": "html",
+                        "url": "https://kerberos.org/dist/",
+                        "version-pattern": "Kerberos V5 Release ([\\d\\.-]*) - current release",
+                        "url-template": "https://kerberos.org/dist/krb5/$major.$minor/krb5-$version.tar.gz"
                     }
                 }
             ],
