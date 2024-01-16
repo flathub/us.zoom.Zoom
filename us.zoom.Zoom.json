@@ -56,6 +56,16 @@
             ]
         },
         {
+            "name": "zypak",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/refi64/zypak",
+                    "commit": "ded79a2f8a509adc21834b95a9892073d4a91fdc"
+                }
+            ]
+        },
+        {
             "name": "zoom",
             "buildsystem": "simple",
             "build-commands": [
