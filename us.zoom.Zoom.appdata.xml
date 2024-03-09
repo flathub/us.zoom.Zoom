@@ -28,6 +28,7 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="5.17.11.3835" date="2024-03-09"/>
     <release version="5.17.5.2543" date="2024-01-23"/>
     <release version="5.17.1.1840" date="2023-12-27"/>
     <release version="5.16.10.668" date="2023-11-20"/>
@@ -67,7 +68,7 @@
     <release version="5.8.6.739" date="2021-11-29"/>
     <release version="5.8.4.210" date="2021-11-15"/>
     <release version="5.8.3.145" date="2021-10-25"/>
-    <release version="5.8.0.16" date="2021-09-23" />
+    <release version="5.8.0.16" date="2021-09-23"/>
     <release version="5.7.31792.0820" date="2021-08-23"/>
     <release version="5.7.29123.0808" date="2021-08-09"/>
     <release version="5.7.28991.0726" date="2021-07-26"/>
