@@ -19,4 +19,10 @@ if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
 	fi
 fi
 
+# Support for Freedesktop.org user directory layout
+# Verify ~/Documents does not exist, to then create a symbolic link to the xdg documents directory
+if [[ ! -e ~/Documents ]]; then
+	ln -s $(xdg-user-dir DOCUMENTS) ~/Documents
+fi
+
 TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID" exec /app/extra/zoom/ZoomLauncher "$@"
