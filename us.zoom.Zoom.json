@@ -18,7 +18,7 @@
         "--share=network",
         "--device=all",
         "--filesystem=~/Documents/Zoom:create",
-        "--filesystem=~/.zoom:create",
+        "--persist=.zoom",
         "--env=QT_QPA_PLATFORM=",
         "--own-name=org.kde.*",
         "--talk-name=org.freedesktop.ScreenSaver"
