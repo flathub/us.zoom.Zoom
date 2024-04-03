@@ -26,6 +26,6 @@ fi
 # to use this mechanism, but it does nothing (and it won't try to use the Qt
 # singleton mechanism). Deleting these sockets bypasses this.
 # https://github.com/flathub/us.zoom.Zoom/issues/445
-rm -f "$HOME/.zoom/data/cefcache/*/SingletonSocket"
+rm -f $HOME/.zoom/data/cefcache/*/SingletonSocket
 
 TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID" exec /app/extra/zoom/ZoomLauncher "$@"
