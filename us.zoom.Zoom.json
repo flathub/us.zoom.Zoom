@@ -1,8 +1,10 @@
 {
     "app-id": "us.zoom.Zoom",
-    "runtime": "org.kde.Platform",
-    "runtime-version": "6.4",
-    "sdk": "org.kde.Sdk",
+    "base": "org.electronjs.Electron2.BaseApp",
+    "base-version": "23.08",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "23.08",
+    "sdk": "org.freedesktop.Sdk",
     "command": "zoom",
     "separate-locales": false,
     "tags": [
@@ -16,11 +18,43 @@
         "--share=network",
         "--device=all",
         "--filesystem=~/Documents/Zoom:create",
-        "--filesystem=~/.zoom:create",
+        "--persist=.zoom",
+        "--env=QT_QPA_PLATFORM=",
         "--own-name=org.kde.*",
         "--talk-name=org.freedesktop.ScreenSaver"
     ],
     "modules": [
+        {
+            "name": "krb5",
+            "subdir": "src",
+            "config-opts": [
+                "--disable-static",
+                "--disable-rpath"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://kerberos.org/dist/krb5/1.21/krb5-1.21.2.tar.gz",
+                    "sha256": "9560941a9d843c0243a71b17a7ac6fe31c7cebb5bce3983db79e52ae7e850491",
+                    "x-checker-data": {
+                        "type": "html",
+                        "url": "https://kerberos.org/dist/",
+                        "version-pattern": "Kerberos V5 Release ([\\d\\.-]*) - current release",
+                        "url-template": "https://kerberos.org/dist/krb5/$major.$minor/krb5-$version.tar.gz"
+                    }
+                }
+            ],
+            "cleanup": [
+                "/sbin",
+                "/bin",
+                "/var",
+                "/include",
+                "/lib/pkgconfig",
+                "/share/et",
+                "/share/examples",
+                "/share/man"
+            ]
+        },
         {
             "name": "zoom",
             "buildsystem": "simple",
@@ -89,9 +123,9 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://cdn.zoom.us/prod/5.12.6.173/zoom_x86_64.tar.xz",
-                    "sha256": "ff1972d3e850922d1736495774ae0c1affea5c232130c39e68a3a07f5e1dc55f",
-                    "size": 142780308,
+                    "url": "https://cdn.zoom.us/prod/5.17.11.3835/zoom_x86_64.tar.xz",
+                    "sha256": "c280bb09912dcb7253677a359644269279521e66e2d7b273e9de7ec41cf77aad",
+                    "size": 186799104,
                     "x-checker-data": {
                         "type": "rotating-url",
                         "url": "https://zoom.us/client/latest/zoom_x86_64.tar.xz",
