@@ -1,7 +1,7 @@
 {
     "app-id": "us.zoom.Zoom",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15",
+    "runtime-version": "6.4",
     "sdk": "org.kde.Sdk",
     "command": "zoom",
     "separate-locales": false,
@@ -89,9 +89,9 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://cdn.zoom.us/prod/5.11.0.3540/zoom_x86_64.tar.xz",
-                    "sha256": "b7b812f151ab303a2ca1cff581c29298fde36c1664855221e4f511ae228fe502",
-                    "size": 131577872,
+                    "url": "https://cdn.zoom.us/prod/5.12.6.173/zoom_x86_64.tar.xz",
+                    "sha256": "ff1972d3e850922d1736495774ae0c1affea5c232130c39e68a3a07f5e1dc55f",
+                    "size": 142780308,
                     "x-checker-data": {
                         "type": "rotating-url",
                         "url": "https://zoom.us/client/latest/zoom_x86_64.tar.xz",
