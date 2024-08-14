@@ -68,7 +68,9 @@
                 "install -Dm644 us.zoom.Zoom.256.png /app/share/icons/hicolor/256x256/apps/us.zoom.Zoom.png",
                 "install -Dm755 zoom.sh /app/bin/zoom",
                 "install -Dm755 zoom-wrapper.sh /app/bin/zoom-wrapper.sh",
-                "install -Dm644 zoom-ld.so.conf /app/etc/ld.so.conf"
+                "install -Dm644 zoom-ld.so.conf /app/etc/ld.so.conf",
+                "echo -e '#!/bin/sh\necho xdg-desktop-portal 1.18.4' > /app/lib/xdg-desktop-portal",
+                "chmod 755 /app/lib/xdg-desktop-portal"
             ],
             "sources": [
                 {
@@ -78,6 +80,7 @@
                         "tar xf zoom.tar.xz --no-same-owner",
                         "rm -f zoom.tar.xz",
                         "mv /app/extra/zoom/zoom /app/extra/zoom/zoom.real",
+                        "sed -i 's,/usr/lib/xdg-desktop-portal,/app/lib/xdg-desktop-portal,g' /app/extra/zoom/zoom.real",
                         "cp /app/bin/zoom-wrapper.sh /app/extra/zoom/zoom"
                     ]
                 },
