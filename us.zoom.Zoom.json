@@ -79,9 +79,9 @@
                     "commands": [
                         "tar xf zoom.tar.xz --no-same-owner",
                         "rm -f zoom.tar.xz",
-                        "mv /app/extra/zoom/zoom /app/extra/zoom/zoom.real",
-                        "sed -i 's,/usr/lib/xdg-desktop-portal,/app/lib/xdg-desktop-portal,g' /app/extra/zoom/zoom.real",
-                        "cp /app/bin/zoom-wrapper.sh /app/extra/zoom/zoom"
+                        "sed -i 's,/usr/lib/xdg-desktop-portal,/app/lib/xdg-desktop-portal,g' /app/extra/zoom/zoom",
+                        "mv /app/extra/zoom/ZoomWebviewHost /app/extra/zoom/ZoomWebviewHost.real",
+                        "cp /app/bin/zoom-wrapper.sh /app/extra/zoom/ZoomWebviewHost"
                     ]
                 },
                 {
