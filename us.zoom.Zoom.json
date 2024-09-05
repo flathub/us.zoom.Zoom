@@ -126,7 +126,7 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://cdn.zoom.us/prod/6.1.11.1545/zoom_x86_64.tar.xz",
+                    "url": "https://zoom.us/client/6.1.11.1545/zoom_x86_64.tar.xz",
                     "sha256": "b4a743ff8360ab589e8cf6538ebfb39f461a459dad2f63a443e4ff608e88a0a9",
                     "size": 206886856,
                     "x-checker-data": {
