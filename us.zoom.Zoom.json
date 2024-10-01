@@ -20,7 +20,7 @@
         "--filesystem=~/Documents/Zoom:create",
         "--persist=.zoom",
         "--env=QT_QPA_PLATFORM=",
-        "--own-name=org.kde.*",
+        "--talk-name=org.kde.StatusNotifierWatcher",
         "--talk-name=org.freedesktop.ScreenSaver"
     ],
     "modules": [
