@@ -56,6 +56,27 @@
             ]
         },
         {
+            "name": "media-keys",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -D data/org.gnome.settings-daemon.plugins.media-keys.gschema.xml.in /app/share/glib-2.0/schemas/org.gnome.settings-daemon.plugins.media-keys.gschema.xml",
+                "sed -i -e 's/@GETTEXT_PACKAGE@/gnome-settings-daemon/g' /app/share/glib-2.0/schemas/org.gnome.settings-daemon.plugins.media-keys.gschema.xml",
+                "glib-compile-schemas /app/share/glib-2.0/schemas"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gnome-settings-daemon/48/gnome-settings-daemon-48.1.tar.xz",
+                    "sha256": "3860a2ea214dcbcb6600ae7a1e3358a5389215087bc3e4a47cee3f87baee062e",
+                    "x-checker-data": {
+                        "type": "gnome",
+                        "name": "gnome-settings-daemon",
+                        "stable-only": true
+                    }
+                }
+            ]
+        },
+        {
             "name": "zoom",
             "buildsystem": "simple",
             "build-commands": [
