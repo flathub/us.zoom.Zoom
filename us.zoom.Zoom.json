@@ -56,6 +56,27 @@
             ]
         },
         {
+            "name": "media-keys",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -D data/org.gnome.settings-daemon.plugins.media-keys.gschema.xml.in /app/share/glib-2.0/schemas/org.gnome.settings-daemon.plugins.media-keys.gschema.xml",
+                "sed -i -e 's/@GETTEXT_PACKAGE@/gnome-settings-daemon/g' /app/share/glib-2.0/schemas/org.gnome.settings-daemon.plugins.media-keys.gschema.xml",
+                "glib-compile-schemas /app/share/glib-2.0/schemas"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gnome-settings-daemon/48/gnome-settings-daemon-48.1.tar.xz",
+                    "sha256": "3860a2ea214dcbcb6600ae7a1e3358a5389215087bc3e4a47cee3f87baee062e",
+                    "x-checker-data": {
+                        "type": "gnome",
+                        "name": "gnome-settings-daemon",
+                        "stable-only": true
+                    }
+                }
+            ]
+        },
+        {
             "name": "zoom",
             "buildsystem": "simple",
             "build-commands": [
@@ -126,9 +147,9 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://cdn.zoom.us/prod/6.4.3.827/zoom_x86_64.tar.xz",
-                    "sha256": "f6644d1e7c1788ff8df2fa197a770817512b85be537f09d6889e12367d6527ba",
-                    "size": 213598624,
+                    "url": "https://cdn.zoom.us/prod/6.4.6.1370/zoom_x86_64.tar.xz",
+                    "sha256": "07117ca3cff98c17d2728d672853dd03ab7883dc649d084487b7229c7eb22400",
+                    "size": 218085472,
                     "x-checker-data": {
                         "type": "rotating-url",
                         "url": "https://zoom.us/client/latest/zoom_x86_64.tar.xz",
