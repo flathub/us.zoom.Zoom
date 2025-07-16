@@ -147,9 +147,9 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://cdn.zoom.us/prod/6.5.3.2773/zoom_x86_64.tar.xz",
-                    "sha256": "c233eafad8f51dc960139a9018876a4a3658cabb1d71e87e571248a6b882d5c7",
-                    "size": 227207272,
+                    "url": "https://cdn.zoom.us/prod/6.5.5.3045/zoom_x86_64.tar.xz",
+                    "sha256": "738a479db462653f0e0801660b50ee1367ede75d2cadbc81b204b5b157b17913",
+                    "size": 226861796,
                     "x-checker-data": {
                         "type": "rotating-url",
                         "url": "https://zoom.us/client/latest/zoom_x86_64.tar.xz",
