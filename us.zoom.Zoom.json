@@ -34,8 +34,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://kerberos.org/dist/krb5/1.21/krb5-1.21.3.tar.gz",
-                    "sha256": "b7a4cd5ead67fb08b980b21abd150ff7217e85ea320c9ed0c6dadd304840ad35",
+                    "url": "https://kerberos.org/dist/krb5/1.22/krb5-1.22.1.tar.gz",
+                    "sha256": "1a8832b8cad923ebbf1394f67e2efcf41e3a49f460285a66e35adec8fa0053af",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://kerberos.org/dist/",
@@ -147,9 +147,9 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://cdn.zoom.us/prod/6.5.10.3973/zoom_x86_64.tar.xz",
-                    "sha256": "885353121db220fd198e8e890a23dde1db92ea856a29544e82b58c06a583f821",
-                    "size": 226322736,
+                    "url": "https://cdn.zoom.us/prod/6.5.11.4015/zoom_x86_64.tar.xz",
+                    "sha256": "9777bf6d0ac7dd0810a96f1a99d335a0a23642d6b83f66433729e61868a2ed92",
+                    "size": 226329012,
                     "x-checker-data": {
                         "type": "rotating-url",
                         "url": "https://zoom.us/client/latest/zoom_x86_64.tar.xz",
