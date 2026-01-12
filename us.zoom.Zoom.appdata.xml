@@ -9,6 +9,7 @@
   <url type="homepage">https://zoom.us</url>
   <launchable type="desktop-id">us.zoom.Zoom.desktop</launchable>
   <description>
+    <p>**NOTE: This wrapper is not verified by, affiliated with, or supported by zoom.us.**</p>
     <p>Award winning Zoom brings video conferencing, online meetings and group messaging into one easy-to-use application.</p>
     <ul>
       <li>One consistent enterprise experience for all use cases</li>
@@ -17,7 +18,6 @@
       <li>Easy-to-use, buy and scale</li>
       <li>Most affordable, straightforward pricing</li>
     </ul>
-    <p>NOTE: This wrapper is not verified by, affiliated with, or supported by zoom.us.</p>
   </description>
   <screenshots>
     <screenshot type="default">
