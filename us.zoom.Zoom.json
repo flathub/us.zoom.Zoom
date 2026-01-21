@@ -19,8 +19,14 @@
         "--device=all",
         "--filesystem=xdg-documents/Zoom:create",
         "--persist=.zoom",
+        "--persist=.cache",
         "--env=QT_QPA_PLATFORM=",
         "--own-name=org.kde.*",
+        "--talk-name=org.freedesktop.portal.Desktop",
+        "--talk-name=org.freedesktop.portal.RemoteDesktop",
+        "--talk-name=org.freedesktop.portal.FileChooser",
+        "--talk-name=org.freedesktop.portal.ScreenCast",
+        "--talk-name=org.freedesktop.portal.Inhibit",
         "--talk-name=org.freedesktop.ScreenSaver"
     ],
     "modules": [
@@ -89,9 +95,7 @@
                 "install -Dm644 us.zoom.Zoom.256.png /app/share/icons/hicolor/256x256/apps/us.zoom.Zoom.png",
                 "install -Dm755 zoom.sh /app/bin/zoom",
                 "install -Dm755 zoom-wrapper.sh /app/bin/zoom-wrapper.sh",
-                "install -Dm644 zoom-ld.so.conf /app/etc/ld.so.conf",
-                "echo -e '#!/bin/sh\necho xdg-desktop-portal 1.18.4' > /app/lib/xdg-desktop-portal",
-                "chmod 755 /app/lib/xdg-desktop-portal"
+                "install -Dm644 zoom-ld.so.conf /app/etc/ld.so.conf"
             ],
             "sources": [
                 {
@@ -100,7 +104,6 @@
                     "commands": [
                         "tar xf zoom.tar.xz --no-same-owner",
                         "rm -f zoom.tar.xz",
-                        "sed -i 's,/usr/lib/xdg-desktop-portal,/app/lib/xdg-desktop-portal,g' /app/extra/zoom/zoom",
                         "mv /app/extra/zoom/ZoomWebviewHost /app/extra/zoom/ZoomWebviewHost.real",
                         "cp /app/bin/zoom-wrapper.sh /app/extra/zoom/ZoomWebviewHost"
                     ]
