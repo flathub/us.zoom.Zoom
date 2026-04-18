@@ -66,8 +66,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-settings-daemon/50/gnome-settings-daemon-50.0.tar.xz",
-                    "sha256": "d82b50336c98a2ed713e9716c372125bb31bdfc2dae9d95baaef4d769d614fb6",
+                    "url": "https://download.gnome.org/sources/gnome-settings-daemon/50/gnome-settings-daemon-50.1.tar.xz",
+                    "sha256": "dd2c9730914f0ececa0229dd8a8c2940a57ddeb0802434558d4b164d79cfe05c",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gnome-settings-daemon",
