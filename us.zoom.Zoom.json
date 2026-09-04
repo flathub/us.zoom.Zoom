@@ -55,6 +55,7 @@
                 "/share/man"
             ]
         },
+        "shared-modules/glu/glu-9.json",
         {
             "name": "media-keys",
             "buildsystem": "simple",
