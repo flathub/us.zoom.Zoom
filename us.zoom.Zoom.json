@@ -67,8 +67,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-settings-daemon/50/gnome-settings-daemon-50.1.tar.xz",
-                    "sha256": "dd2c9730914f0ececa0229dd8a8c2940a57ddeb0802434558d4b164d79cfe05c",
+                    "url": "https://download.gnome.org/sources/gnome-settings-daemon/51/gnome-settings-daemon-51.0.tar.xz",
+                    "sha256": "7c6249118ddfffc4bb34d6b3edaa86b3ea02a1ad2b7711d79480749906767665",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gnome-settings-daemon",
@@ -148,9 +148,9 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://cdn.zoom.us/prod/7.1.5.4332/zoom_x86_64.tar.xz",
-                    "sha256": "17ec33965dace13662a563e4f2ab78281e33f39778ab4fa9fef4da90a5934140",
-                    "size": 296976636,
+                    "url": "https://cdn.zoom.us/prod/7.2.0.5705/zoom_x86_64.tar.xz",
+                    "sha256": "815b022438f46afc8fcc792f87fab70c4e003c8f997aa984c59f6e7fc2b8dc8e",
+                    "size": 302675504,
                     "x-checker-data": {
                         "type": "rotating-url",
                         "url": "https://zoom.us/client/latest/zoom_x86_64.tar.xz",
